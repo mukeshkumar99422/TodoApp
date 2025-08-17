@@ -5,14 +5,14 @@ import axios from 'axios';
 //   headers: { "Content-Type": "application/json" },
 //   body: JSON.stringify({ username: "Mukesh", email: "test@test.com", password: "12345" })
 // });
-
+const prefix=import.meta.env.BACKEND_URL;
 
 const registerUser=async (userData)=>{
-    return axios.post('/api/v1/user/register', userData)
+    return axios.post(`${prefix}/api/v1/user/register`, userData)
     
 }
 const loginUser=async (userData)=>{
-    const rsp=await axios.post('/api/v1/user/login', userData)
+    const rsp=await axios.post(`${prefix}/api/v1/user/login`, userData)
     return rsp
 }
 

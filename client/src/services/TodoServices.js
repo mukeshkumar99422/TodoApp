@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+const prefix=import.meta.env.BACKEND_URL;
+
 //get user token from local storage
 const storedData = localStorage.getItem('todoUserData');
 const user = storedData ? JSON.parse(storedData) : null;
@@ -9,25 +11,25 @@ if(user) axios.defaults.headers.common["Authorization"]=`bearer ${user.token}`;
 
 //create todo
 const createTodo = async (data) => {
-  const res = await axios.post('/api/v1/todo/create', data);
+  const res = await axios.post(`${prefix}/api/v1/todo/create`, data);
   return res.data;
 };
 
 //get todos
 const getTodos = async (id) => {
-  const res = await axios.get(`/api/v1/todo/getAll/${id}`);
+  const res = await axios.get(`${prefix}/api/v1/todo/getAll/${id}`);
   return res.data;
 };
 
 //update todo
 const updateTodo = async (id, data) => {
-  const res = await axios.put(`/api/v1/todo/update/${id}`, data);
+  const res = await axios.put(`${prefix}/api/v1/todo/update/${id}`, data);
   return res.data;
 };
 
 //delete todo
 const deleteTodo = async (id) => {
-  const res = await axios.delete(`/api/v1/todo/delete/${id}`);
+  const res = await axios.delete(`${prefix}/api/v1/todo/delete/${id}`);
   return res.data;
 };
 
