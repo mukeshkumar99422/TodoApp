@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const prefix=import.meta.env.BACKEND_URL;
+const prefix='https://todo-app-backend-ud8f.onrender.com';
 
 //get user token from local storage
 const storedData = localStorage.getItem('todoUserData');

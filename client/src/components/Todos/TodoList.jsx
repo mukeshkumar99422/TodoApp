@@ -11,11 +11,11 @@ export default function TodoList() {
 
   return (
     <div className="todo-container">
-      {todos.length!=0?todos.map(todo => (
+      {Array.isArray(todos) && todos.length !== 0 ? todos.map(todo => (
         <TodoCard
           key={todo._id} todo={todo}
         />
-      )):null}
+      )) : null}
     </div>
   );
 }
