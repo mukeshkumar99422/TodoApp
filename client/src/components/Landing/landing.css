@@ -7,7 +7,9 @@
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
-  font-Family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  flex-direction: row; /* default: side by side */
+  padding: 1rem;
 }
 
 .landing-content {
@@ -22,7 +24,6 @@
   font-weight: 700;
   margin-bottom: 1.2rem;
   color: #434343ff;
-  
 }
 
 .landing-description {
@@ -59,4 +60,32 @@
   width: 480px;
   max-width: 45vw;
   z-index: 1;
+}
+
+/* ---------- Responsive for mobile ---------- */
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column; /* stack vertically */
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .landing-content {
+    margin-right: 0;
+    margin-bottom: 2rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .landing-title {
+    font-size: 2rem;
+  }
+
+  .landing-description {
+    font-size: 1rem;
+  }
+
+  .landing-image {
+    max-width: 80vw;
+    width: 100%;
+  }
 }
