@@ -5,7 +5,7 @@ import axios from 'axios';
 //   headers: { "Content-Type": "application/json" },
 //   body: JSON.stringify({ username: "Mukesh", email: "test@test.com", password: "12345" })
 // });
-const prefix='https://todo-app-backend-ud8f.onrender.com';
+const prefix='https://todo-app-backend-4lxz.onrender.com';
 
 const registerUser=async (userData)=>{
     return axios.post(`${prefix}/api/v1/user/register`, userData)
