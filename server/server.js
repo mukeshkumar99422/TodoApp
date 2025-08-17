@@ -18,7 +18,10 @@ const app=express();
 //middleware
 app.use(express.json());
 app.use(morgan('dev'));
-app.use(cors());
+app.use(cors({
+    origin: process.env.CORS_OROGIN,
+    credentials: true
+}));
 
 //routes
 app.use('/api/v1/todo',require('./routes/todoRoute'));
