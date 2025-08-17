@@ -19,7 +19,7 @@ const app=express();
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors({
-    origin: process.env.CORS_OROGIN,
+    origin: process.env.CORS_ORIGIN,
     credentials: true
 }));
 
@@ -28,7 +28,7 @@ app.use('/api/v1/todo',require('./routes/todoRoute'));
 app.use('/api/v1/user',require('./routes/userRoute'));
 
 //port
-const PORT=process.env.PORT;
+const PORT=process.env.PORT ||8080;
 //listening
 app.listen(PORT,()=>{
     console.log("server is running on port".bgGreen.blue,PORT);
