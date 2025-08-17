@@ -1,0 +1,6 @@
+no need views as separate react aplication
+controllers                              views
+ 
+
+
+                        models

@@ -1,0 +1,80 @@
+/* Container */
+.main-home-container{
+  background-color: #c2dbff;
+}
+.home-container {
+  padding-top: 4rem; /* account for fixed navbar */
+  max-width: 900px;
+  margin: auto;
+  padding: 4rem 1rem 2rem 1rem;
+  font-family: Arial, sans-serif;
+  
+}
+
+/* Welcome Box */
+.welcome-box {
+  text-align: center;
+  background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-box h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.welcome-box p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.home-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.home-btn {
+  text-decoration: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
+.secondary-btn {
+  background: #374151;
+  color: white;
+}
+
+
+.secondary-btn:hover {
+  background: #1f2937;
+  cursor: pointer;
+}
+
+/* Tips Section */
+.tips-section {
+  margin-top: 2rem;
+  background: #f3f4f6;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tips-section h2 {
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.tips-section ul {
+  list-style: disc inside;
+  color: #4b5563;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.navbar {
+  width: 100%;
+ background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+  color: white;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5); /* bottom shadow */
+  z-index: 100; /* Ensure navbar is above other content */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+}
+
+/* Menu toggle icon (hamburger) */
+.menu-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Menu items */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-links a:hover {
+  background: linear-gradient(90deg, #818cf8 0%, #93c5fd 100%);
+  border-radius: 4px;
+}
+
+/* Profile icon */
+.user-icon {
+  /* cursor: pointer; */
+  font-size: 1.5rem;
+}
+.user-icon a {
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+}
+
+/* Dropdown style */
+.dropdown {
+  flex-direction: column;
+  background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+  width: 100%;
+  padding: 2px;
+  animation: slideDown 0.3s ease-in-out;
+
+  /* REMOVE these: */
+  position: fixed;
+  top: 3.1rem;
+  left: 0;
+
+  /* Add this: */
+  /* position: static; */
+
+   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5); /* bottom shadow */
+}
+
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Large screen layout */
+.large-screen {
+  display: flex;
+}
+
+.small-screen {
+  display: none;
+}
+
+/* Responsive rules */
+@media (max-width: 400px) {
+  .large-screen {
+    display: none; /* hide icons inline */
+  }
+  .small-screen {
+    display: block; /* show hamburger */
+  }
+}
+
+
+/* Profile popup */
+.profile-popup {
+  position: absolute;
+  right: 1rem;
+  top: 3.4rem;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  z-index: 200;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.welcome-text {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.logout-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  border: none;
+}
+
+.logout-btn:hover {
+  background: #6c9aff;
+  cursor: pointer;
+}
+
